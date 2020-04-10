@@ -8,17 +8,17 @@ public class MeteoApp {
 		
 		
 		System.out.printf("Please enter the code of one of these countries:%"+
-						  "n%-16s - 498%n%-16s - 380%n%-16s - 642%n"+
-						  "%-16s - 826%n%-16s - 156%n", "Moldova" , 
-						  "Italy" , "Romania" , "United Kingdom" , "China");
+				  "n%-16s - 498%n%-16s - 380%n%-16s - 642%n"+
+				  "%-16s - 826%n%-16s - 156%n", "Moldova" , 
+			          "Italy" , "Romania" , "United Kingdom" , "China");
 		
 		MeteoOutput.countryByCode(in.nextInt());
 		
 
 		
 		System.out.printf("%nWhich information should be desplayed?%n" +
-						  "For temperature enter %7s%nFor humadity enter %10s%n" +
-						  "For both enter %14s%n" , "- 1", "- 2", "- 3");
+				  "For temperature enter %7s%nFor humadity enter %10s%n" +
+				  "For both enter %14s%n" , "- 1", "- 2", "- 3");
 		
 		MeteoOutput.outputCheck(in.nextInt());
 		
@@ -84,7 +84,7 @@ class MeteoOutput extends PrivateMeteoProvider {
 				break;
 			default:
 				System.err.println("Can't provide data for this country!\n" +
-								   "Please enter a valid code!");
+						   "Please enter a valid code!");
 				countryByCode(in.nextInt());
 		}
 	}
@@ -115,13 +115,13 @@ class MeteoOutput extends PrivateMeteoProvider {
 	public static void tempOutput(String country) {	
 			
 		System.out.printf("The current temperature in " + country +
-						  " is: %.1f\u2103%n" , getCurrentTemperature());
+				  " is: %.1f\u2103%n" , getCurrentTemperature());
 	}
 	
 	public static void humidityOutput(String country) {
 		
 		
 		System.out.println("The humadity of air in " + country + " is: " + 
-						    getCurrentHumidity() + "%.");
+				    getCurrentHumidity() + "%.");
 	}
 }
